@@ -5,35 +5,33 @@ public class Main {
         int payment = 15000;
         int totalDeposit = 0;
         int month = 1;
-        while(totalDeposit <= 2459000) {
+        while (totalDeposit <= 2459000) {
             totalDeposit = totalDeposit + payment; // положили  15000
-            totalDeposit = totalDeposit + (totalDeposit/100); //начислили %% и положили их на вклад
-            System.out.println("Месяц " + month + " сумма накоплений равна " + totalDeposit + " рублей.");
+
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + totalDeposit + " рублей.");
             month++;
         }
         System.out.println();
 
         //Task-2
         int i = 1;
-        while(i < 11) {
+        while (i < 11) {
             System.out.print(i + " ");
             i++;
         }
         i--;
         System.out.println();
-        for (; i > 0; i --) {
+        for (; i > 0; i--) {
             System.out.print(i + " ");
         }
         System.out.println("\n");
 
         //Task-3
         int population = 12_000_000; // население
-        int populationIncrease = 0; // рождаемость
-        int populationDecrease = 0; // смертность
+        int populationIncrease = population / 1000 * 17; // рождаемость
+        int populationDecrease = population / 1000 * 8; // смертность
         int year = 2024;
-        for(int a = 0; a < 10; a++) {
-            populationIncrease  = populationIncrease + population / 1000 * 17;
-            populationDecrease = populationDecrease + population / 1000 * 8;
+        for (int a = 0; a < 10; a++) {
             population = population + populationIncrease - populationDecrease;
             System.out.println("Год - " + year + ", численность населения составляет " + population);
             year++;
@@ -47,10 +45,10 @@ public class Main {
         int requiredSum = 12_000_000;
         int numberMonth = 1;
 
-        while(sumDeposit <= requiredSum) {
+        while (sumDeposit <= requiredSum) {
 
             sumDeposit = sumDeposit + donation; //внесен еж.мес платеж
-            sumDeposit =  sumDeposit + (int) (sumDeposit * rateMonth); //начислены %%
+            sumDeposit = sumDeposit + (int) (sumDeposit * rateMonth); //начислены %%
             System.out.println("Месяц " + numberMonth + ", Вася накопил " + sumDeposit);
             numberMonth++;
         }
@@ -64,11 +62,11 @@ public class Main {
         int numberMonth2 = 0;
 
         System.out.println("Промежуточные суммы накоплений каждого 6-го месяца:");
-        while(sumDeposit2 <= requiredSum2) {
+        while (sumDeposit2 <= requiredSum2) {
             numberMonth2++;
             sumDeposit2 = sumDeposit2 + donation2; //внесен еж.мес платеж
-            sumDeposit2 =  sumDeposit2 + (int) (sumDeposit2 * rateMonth2); //начислены %%
-            if(numberMonth2 % 6 == 0) {
+            sumDeposit2 = sumDeposit2 + (int) (sumDeposit2 * rateMonth2); //начислены %%
+            if (numberMonth2 % 6 == 0) {
                 System.out.println(" -месяц " + numberMonth2 + ", Вася накопил " + sumDeposit2);
             }
 
@@ -84,10 +82,10 @@ public class Main {
 
         System.out.println("Промежуточные суммы накоплений каждого 6-го месяца в течение 9-ти лет:");
 
-        for(; numberMonth3 <= termOfSavingsYears * 12; numberMonth3++) {
+        for (; numberMonth3 <= termOfSavingsYears * 12; numberMonth3++) {
             sumDeposit3 = sumDeposit3 + donation3; //внесен еж.мес платеж
-            sumDeposit3 =  sumDeposit3 + (int) (sumDeposit3 * rateMonth3); //начислены %%
-            if(numberMonth3 % 6 == 0) {
+            sumDeposit3 = sumDeposit3 + (int) (sumDeposit3 * rateMonth3); //начислены %%
+            if (numberMonth3 % 6 == 0) {
                 System.out.println(" -месяц " + numberMonth3 + ", Вася накопил " + sumDeposit3);
             }
         }
@@ -95,7 +93,7 @@ public class Main {
 
         //Task-7
         int firstFridayOfMonth = 5;
-        for(; firstFridayOfMonth <= 31; firstFridayOfMonth += 7){
+        for (; firstFridayOfMonth <= 31; firstFridayOfMonth += 7) {
             System.out.println("Сегодня пятница, " + firstFridayOfMonth + "-ое число." +
                     " Необходимо подготовить отчет.");
         }
@@ -106,7 +104,7 @@ public class Main {
         int pastPeriod = currentYear - 200;
         int futurePeriod = currentYear + 100;
         for (; pastPeriod <= futurePeriod; pastPeriod++) {
-            if(pastPeriod % 79 == 0) System.out.println(pastPeriod);
+            if (pastPeriod % 79 == 0) System.out.println(pastPeriod);
         }
     }
 }
